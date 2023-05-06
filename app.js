@@ -28,7 +28,7 @@ const months = [
   const second = document.querySelector('.seconds')
   const giveAwayTime = document.querySelector('.para1')
 
-  const futureDate = new Date(2023, 4, 3, 11, 30,0)
+  const futureDate = new Date(2024, 8, 6, 11, 30,0)
   // console.log(futureDate.getTime());
   
   let futureYear = futureDate.getFullYear();
@@ -65,6 +65,11 @@ let remainTime = fTime - now
   if(remainTime < 0){
     clearInterval(x);
     giveAwayTime.innerHTML = `<p class="para1"> Sorry this Giveaway has Expired.</p>`
+    day.innerHTML = `<h1>00</h1><p>DAYS</p>`
+  hour.innerHTML = `<h1>00</h1><p>HOURS</p>`
+  minute.innerHTML = `<h1>00</h1><p>MINUTES</p>`
+  second.innerHTML = `<h1>00</h1><p>SECONDS</p>`
+
   }
 },1000);
 
